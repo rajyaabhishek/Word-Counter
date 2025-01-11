@@ -98,7 +98,7 @@ const App = () => {
     <div className="bg-gradient-to-br from-blue-600 via-orange-400 to-yellow-300 text-white min-h-screen flex flex-col items-center justify-center p-4">
     <header className="flex items-center justify-center gap-6 mb-8">
       <img
-        src="public/ff.png"
+        src={`${process.env.PUBLIC_URL}/ff.png`}
         alt="AI Word Counter"
         className="w-16 h-16 rounded-lg drop-shadow-lg"
       />
@@ -110,7 +110,7 @@ const App = () => {
     <div className="w-full max-w-5xl bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-2xl shadow-2xl mb-8 flex items-center justify-between">
       <div className="flex items-center gap-4">
         <img
-          src="public/ff.png"
+          src={`${process.env.PUBLIC_URL}/ff.png`}
           alt="App Icon"
           className="w-12 h-12 rounded-lg"
         />
