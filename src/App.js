@@ -1,5 +1,22 @@
 import { File, FileText, ImageIcon } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router} from 'react-router-dom';
+ReactDOM.render(<Router basename={process.env.PUBLIC_URL}>< App /></Router>, document.getElementById('root'));
+
+render() {
+    console.log(this.state);
+    console.log("This is the process.env", process.env.PUBLIC_URL)
+    // debugger
+    return (
+      <div>
+        <Route exact path={`/gameover`} component={GameOver} />
+        <Route exact path={`/new`} render={ (routerProps) => < NewUser routerProps={routerProps} />} />
+        <Route exact path={`/edit`} render={ (routerProps) => < EditUser routerProps={routerProps} />} />
+        <Route exact path={`/home`} render={ (routerProps) => < Home routerProps={routerProps} setUpGame={this.setUpGame} />} />
+        <Route exact path={`/gametime`} render={ (routerProps) => < QuestionContainer user1Id={this.state.user1Id} user2Id={this.state.user2Id} gameId={this.state.gameId} routerProps={routerProps}/>} />
+      </div>
+    );
+  }
 
 const App = () => {
   // ... [Previous state and handlers remain the same] ...
