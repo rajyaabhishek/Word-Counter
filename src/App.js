@@ -98,7 +98,7 @@ const App = () => {
     <div className="bg-gradient-to-br from-blue-600 via-orange-400 to-yellow-300 text-white min-h-screen flex flex-col items-center justify-center p-4">
     <header className="flex items-center justify-center gap-6 mb-8">
       <img
-        src="/ff.png"
+        src="public/ff.png"
         alt="AI Word Counter"
         className="w-16 h-16 rounded-lg drop-shadow-lg"
       />
@@ -106,6 +106,35 @@ const App = () => {
        Ai Word Counter
       </h1>
     </header>
+ {/* Download Banner */}
+    <div className="w-full max-w-5xl bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-2xl shadow-2xl mb-8 flex items-center justify-between">
+      <div className="flex items-center gap-4">
+        <img
+          src="public/ff.png"
+          alt="App Icon"
+          className="w-12 h-12 rounded-lg"
+        />
+        <div>
+          <h2 className="text-2xl font-bold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
+            Download the App!
+          </h2>
+          <p className="text-lg" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
+            Get the AI Word Counter app on your Android device.
+          </p>
+        </div>
+      </div>
+      <a
+        href="https://ai-word-counter.en.uptodown.com/android"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-xl hover:bg-blue-100 transition-all duration-300"
+      >
+        <Download className="w-6 h-6" />
+        <span className="text-lg font-semibold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
+          Download Now
+        </span>
+      </a>
+    </div>
       <div className="w-full max-w-5xl bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl">
         <div className="flex flex-col gap-8">
           <div className="bg-gradient-to-r from-orange-500 via-yellow-500 to-blue-500 p-6 rounded-xl shadow-lg">
